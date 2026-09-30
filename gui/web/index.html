@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f5f4ef" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#141d18" media="(prefers-color-scheme: dark)">
+  <meta name="referrer" content="no-referrer">
+  <title>Mole · A lighter Mac</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Mole navigation">
+      <a class="brand" href="#overview" data-view="overview" aria-label="Mole overview">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 35c0-9 8-22 18-22s18 13 18 22" fill="currentColor"/><path d="M9 22c-4-2-5-7-2-9s8 0 10 4M39 22c4-2 5-7 2-9s-8 0-10 4" fill="currentColor"/><path class="brand-face" d="M13 30c1-7 5-10 11-10s10 3 11 10"/><circle cx="18" cy="28" r="1.8" fill="currentColor"/><circle cx="30" cy="28" r="1.8" fill="currentColor"/><path class="brand-nose" d="m21 33 3 3 3-3"/><path d="M3 37h42" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+        <span>mole<span class="brand-period">.</span></span>
+        <span class="brand-label">LOCAL</span>
+      </a>
+      <div class="sidebar-scroll">
+        <nav id="navigation" aria-label="Commands">
+          <button class="nav-item active" data-view="overview"><span class="nav-placeholder"></span><span>Overview</span></button>
+        </nav>
+      </div>
+      <div class="sidebar-bottom">
+        <div class="machine-card"><span class="machine-icon" id="machine-icon"></span><div><strong id="machine-name">Your Mac</strong><span id="machine-os">Connecting…</span></div></div>
+        <div class="connection"><span class="connection-dot" id="connection-dot"></span><span id="connection-label">Connecting locally</span><span class="version" id="version"></span></div>
+      </div>
+    </aside>
+    <div class="sidebar-scrim" id="sidebar-scrim" hidden></div>
+    <div class="main-shell">
+      <header class="topbar">
+        <div class="topbar-left"><button class="icon-button menu-button" id="menu-button" aria-label="Open navigation" aria-expanded="false" aria-controls="sidebar"></button><span class="crumb-brand">Your workspace</span><span class="crumb-divider">/</span><span id="view-label">Overview</span></div>
+        <div class="topbar-right"><span class="private-label" id="private-label"></span><button class="icon-button" id="refresh-state" aria-label="Refresh disk information" title="Refresh disk information"></button></div>
+      </header>
+      <main id="main" tabindex="-1"><div class="initial-state"><span class="loading-orbit" aria-hidden="true"></span><p>Getting to know your Mac…</p></div></main>
+      <footer class="page-footer"><span>A little care goes a long way.</span><span>Made for your Mac <span aria-hidden="true">↗</span></span></footer>
+    </div>
+  </div>
+  <div class="toast-stack" id="toast-stack" aria-live="polite" aria-atomic="false"></div>
+  <dialog id="action-dialog" aria-labelledby="dialog-title" aria-describedby="dialog-description">
+    <div class="dialog-top"><span class="dialog-icon" id="dialog-icon"></span><button class="icon-button" id="dialog-close" aria-label="Close dialog"></button></div>
+    <div id="dialog-content"></div>
+    <div class="dialog-actions" id="dialog-actions"></div>
+  </dialog>
+  <noscript><div class="noscript">Enable JavaScript to connect to your local Mole session.</div></noscript>
+</body>
+</html>
